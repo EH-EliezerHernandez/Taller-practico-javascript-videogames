@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platzi- Jueguito online de carreras y calaveras</title>
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <canvas id="game"></canvas>
+        <div class="btns">
+            <button id="up" class="btn">↑</button>
+            <button id="left" class="btn">←</button>
+            <button id="right" class="btn">→</button>
+            <button id="down" class="btn">↓</button>
+        </div>
+        <div class="menssages">
+            <p>Vidas: <span id="lifes"></span></p>
+            <p>Tiempo: ⏱ <span id="tiempo"></span></p>
+            <p id="recordContainer" class="inactive">Record: 🥇 <span id="record"></span></p>
+        </div>
+        <!-- <section class="win-information inactive" id="winContainer">
+            <h1 class="win-information__title">¡Felicidades eres el nuevo campeon del juego!</h1>
+            <span class="win-information__emoji">🏆</span>
+            <p class="win-information__description">¡Ahora el trofeo es tuyo!</p>
+            <p class="win-information__detalle">Superaste el record de <span id="oldRecord"></span></p>
+            <button class="btn btn--play-again">Volver a jugar</button>
+        </section> -->
+    </div>
+    <script src="./maps.js"></script>
+    <script src="./games.js"></script>
+</body>
+
+</html>
