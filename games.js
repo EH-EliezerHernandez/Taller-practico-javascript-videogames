@@ -8,16 +8,18 @@ const $record = document.querySelector("#record");
 const $recordContainer = document.querySelector("#recordContainer");
 
 /* Functions */
-
+function formatUnitTime(unitTime) {
+  return `${unitTime}`.padStart(2, "0");
+}
 function formatTime(ms) {
   const cs = parseInt(ms / 10) % 100; //centisegundos
   const seg = parseInt(ms / 1000) % 60; //segundos
   const min = parseInt(ms / 60000) % 60; //minutos
   const hr = parseInt(ms / 3600000) % 24; //horas
-  const csStr = `0${cs}`.slice(-2);
-  const segStr = `0${seg}`.slice(-2);
-  const minStr = `0${min}`.slice(-2);
-  const hrStr = `0${hr}`.slice(-2);
+  const csStr = formatUnitTime(cs);
+  const segStr = formatUnitTime(seg);
+  const minStr = formatUnitTime(min);
+  const hrStr = formatUnitTime(hr);
   return `${hrStr}:${minStr}:${segStr}:${csStr}`;
 }
 
